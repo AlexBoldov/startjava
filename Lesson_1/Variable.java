@@ -8,6 +8,7 @@ public class Variable {
 		double cpuFrequency = 3.33;
 		char procMarking = 'T';
 		boolean isIntegratedVideo = true;
+
 		System.out.println(numberOfCores);
 		System.out.println(bitness);
 		System.out.println(memorySize);
