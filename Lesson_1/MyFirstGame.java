@@ -1,6 +1,9 @@
 public class MyFirstGame {
 	public static void main(String[] args) {
-		int hiddenNumber = 41, inputNumber = 87, leftInterval = 1, rightInterval = 100;
+		int hiddenNumber = 41; 
+		int inputNumber = 87;
+		int leftInterval = 1;
+		int rightInterval = 100;
 
 		while (hiddenNumber != inputNumber) {
 			System.out.print("Это число " + inputNumber + "? ");
