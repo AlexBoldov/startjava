@@ -3,6 +3,7 @@ public class Calculator {
 	private int firstNumber;
 	private char operation;
 	private int secondNumber;
+	private int result;
 
 	public int getFirstNumber() {
 		return firstNumber;
@@ -28,31 +29,31 @@ public class Calculator {
 		this.secondNumber = secondNumber;
 	}
 
-	public void calculation() {
+	public void calculate() {
 		switch (operation) {
 			case '+' :
-				System.out.println("Результат вычисления: " + (firstNumber + secondNumber));
+				result = firstNumber + secondNumber;
 				break;
 			case '-' :
-				System.out.println("Результат вычисления: " + (firstNumber - secondNumber));
+				result = firstNumber - secondNumber;
 				break;
 			case '*' :
-				System.out.println("Результат вычисления: " + (firstNumber * secondNumber));
+				result = firstNumber * secondNumber;
 				break;
 			case '/' :
-				System.out.println("Результат вычисления: " + (firstNumber / secondNumber));
+				result = firstNumber / secondNumber;
 				break;
 			case '^' :
-				int result = 1;
+				result = 1;
 				for (int i = 1; i <= secondNumber; i++) {
 					result *= firstNumber;
 				}
-				System.out.println("Результат вычисления: " + result);
 				break;
 			case '%' :
-				System.out.println("Результат вычисления: " + (firstNumber % secondNumber));
+				result = firstNumber % secondNumber;
 				break;
 			default : System.out.println("Ошибка! Недопустимый знак математической операции. Операция не выполнена.");
 		}
+		System.out.println("Результат вычисления: " + result);
 	}
 }

@@ -7,7 +7,7 @@ public class CalculatorTest {
 		Calculator calculator = new Calculator();
 		String isRepeat;
 
-		while (true) {
+		do {
 			System.out.print("Введите первое число: ");
 			calculator.setFirstNumber(scanner.nextInt());
 			System.out.print("Введите знак математической операции: ");
@@ -15,19 +15,13 @@ public class CalculatorTest {
 			System.out.print("Введите второе число: ");
 			calculator.setSecondNumber(scanner.nextInt());
 
-			calculator.calculation();
+			calculator.calculate();
 
 			System.out.println();
-			while (true) {
+			do {
 				System.out.print("Хотите продолжить? [да/нет]: ");
 				isRepeat = scanner.next();
-				if (isRepeat.equals("да") || isRepeat.equals("нет")) {
-					break;
-				}
-			}
-			if (isRepeat.equals("нет")) {
-				break;
-			}
-		}
+			} while (!isRepeat.equals("да") && !isRepeat.equals("нет"));
+		} while (!isRepeat.equals("нет"));
 	}
 }
