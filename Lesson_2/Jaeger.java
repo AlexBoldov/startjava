@@ -11,6 +11,25 @@ public class Jaeger {
 	private String operationSystem;
 	private int kaijuKilled;
 
+	public Jaeger(String modelName, String mark, String origin, float height, float weight, int speed, int strength, int armor, String operationSystem, int kaijuKilled) {
+		this.modelName = modelName;
+		this.mark = mark;
+		this.origin = origin;
+		this.height = height;
+		this.weight = weight;
+		this.speed = speed;
+		this.strength = strength;
+		this.armor = armor;
+		this.operationSystem = operationSystem;
+		this.kaijuKilled = kaijuKilled;
+	}
+
+	public Jaeger(String modelName, String mark, String origin) {
+		this.modelName = modelName;
+		this.mark = mark;
+		this.origin = origin;
+	}
+
 	public String getModelName() {
 		return modelName;
 	}

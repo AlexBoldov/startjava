@@ -1,30 +1,9 @@
 public class JaegerTest {
 
 	public static void main(String[] args) {
-		Jaeger coyoteTango = new Jaeger();
-		Jaeger strikerEureka = new Jaeger();
-
-		System.out.println("Инициализация систем...");
-		coyoteTango.setModelName("Coyote Tango");
-		strikerEureka.setModelName("Striker Eureka");
-		coyoteTango.setMark("Mark-1");
-		strikerEureka.setMark("Mark-5");
-		coyoteTango.setOrigin("Japan");
-		strikerEureka.setOrigin("Australia");
-		coyoteTango.setOperationSystem("Nauthlus-4 Zirca Sync");
-		strikerEureka.setOperationSystem("Arbiter Tac-Conn 12");
-		coyoteTango.setHeight(85.4f);
-		strikerEureka.setHeight(76.2f);
-		coyoteTango.setWeight(2.4f);
-		strikerEureka.setWeight(1.9f);
-		coyoteTango.setStrength(7);
-		strikerEureka.setStrength(10);
-		coyoteTango.setSpeed(5);
-		strikerEureka.setSpeed(10);
-		coyoteTango.setArmor(4);
-		strikerEureka.setArmor(9);
-		coyoteTango.setKaijuKilled(2);
-		strikerEureka.setKaijuKilled(11);
+		Jaeger coyoteTango = new Jaeger("Coyote Tango", "Mark-1", "Japan", 85.4f, 2.4f, 5, 7, 4, "Nauthlus-4 Zirca Sync", 2);
+		Jaeger strikerEureka = new Jaeger("Striker Eureka", "Mark-5", "Australia", 76.2f, 1.9f, 10, 10, 9, "Arbiter Tac-Conn 12", 11);
+		Jaeger diabloIntercept = new Jaeger("Diablo Intercept", "Mark-2", "Chile");
 
 		System.out.println("Начало боя...");
 		System.out.println(strikerEureka.getModelName() + " активирует радары...");

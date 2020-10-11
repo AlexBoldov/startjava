@@ -12,17 +12,8 @@ public class GuessNumberTest {
 		String isRepeat;
 		
 		do {
-			GuessNumber guessNumber = new GuessNumber();
-			System.out.println("Компьютер загадал число. Попробуйте отгадать. Удачи!");
-			System.out.println();
-			while (true) {
-				System.out.print(player1.getName() + ", ваша очередь. ");
-				if (guessNumber.play()) break;
-				System.out.println();
-				System.out.print(player2.getName() + ", ваша очередь. ");
-				if (guessNumber.play()) break;
-				System.out.println();
-			}
+			GuessNumber guessNumber = new GuessNumber(player1.getName(), player2.getName());
+			guessNumber.play();
 			do {
 				System.out.print("Хотите продолжить? [да/нет]: ");
 				isRepeat = scanner.next();
