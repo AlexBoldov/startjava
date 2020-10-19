@@ -6,19 +6,19 @@ public class CalculatorTest {
 
 	public static void main(String[] args) {
 		Calculator calc = new Calculator();
-		String isRepeat;
+		String answer;
 
 		do {
 			System.out.print("Введите математическое выражение: ");
 			Scanner scanner = new Scanner(System.in);
-			calc.setInputString(scanner.nextLine());
+			calc.setMathExpression(scanner.nextLine());
 
 			System.out.println("Результат вычисления: " + calc.calculate() + "\n");
 
 			do {
 				System.out.print("Хотите продолжить? [да/нет]: ");
-				isRepeat = scanner.next();
-			} while (!isRepeat.equals("да") && !isRepeat.equals("нет"));
-		} while (!isRepeat.equals("нет"));
+				answer = scanner.next();
+			} while (!answer.equals("да") && !answer.equals("нет"));
+		} while (!answer.equals("нет"));
 	}
 }

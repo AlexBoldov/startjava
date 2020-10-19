@@ -1,27 +1,27 @@
 package com.startjava.lesson_4.calculator;
 
 public class Calculator {
-	private String inputString;
+	private String srcMathExp;
 
-	public void setInputString(String inputString) {
-		this.inputString = inputString;
+	public void setMathExpression(String srcMathExp) {
+		this.srcMathExp = srcMathExp;
 	}
 
 	public int calculate() {
-		String[] mathArgs = inputString.split(" ", 3);
-		switch (mathArgs[1]) {
+		String[] splitMathExp = srcMathExp.split(" ", 3);
+		switch (splitMathExp[1]) {
 			case "+" :
-				return Integer.parseInt(mathArgs[0]) + Integer.parseInt(mathArgs[2]);
+				return Integer.parseInt(splitMathExp[0]) + Integer.parseInt(splitMathExp[2]);
 			case "-" :
-				return Integer.parseInt(mathArgs[0]) - Integer.parseInt(mathArgs[2]);
+				return Integer.parseInt(splitMathExp[0]) - Integer.parseInt(splitMathExp[2]);
 			case "*" :
-				return Integer.parseInt(mathArgs[0]) * Integer.parseInt(mathArgs[2]);
+				return Integer.parseInt(splitMathExp[0]) * Integer.parseInt(splitMathExp[2]);
 			case "/" :
-				return Integer.parseInt(mathArgs[0]) / Integer.parseInt(mathArgs[2]);
+				return Integer.parseInt(splitMathExp[0]) / Integer.parseInt(splitMathExp[2]);
 			case "^" :
-				return (int) Math.pow(Integer.parseInt(mathArgs[0]), Integer.parseInt(mathArgs[2]));
+				return (int) Math.pow(Integer.parseInt(splitMathExp[0]), Integer.parseInt(splitMathExp[2]));
 			case "%" :
-				return Integer.parseInt(mathArgs[0]) % Integer.parseInt(mathArgs[2]);
+				return Integer.parseInt(splitMathExp[0]) % Integer.parseInt(splitMathExp[2]);
 			default : {
 				System.out.println("Ошибка! Недопустимый знак математической операции. Операция не выполнена.");
 				return 0;
