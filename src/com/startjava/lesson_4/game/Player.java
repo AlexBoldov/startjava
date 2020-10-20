@@ -3,10 +3,9 @@ package com.startjava.lesson_4.game;
 import java.util.Arrays;
 
 public class Player {
-	private final static int ENTERED_NUMS_LENGTH = 10;	// ENTERED_NUMS_LENGTH == GuessNumber.MAX_COUNTS
 	private final String name;
-	private final int[] enteredNums = new int[ENTERED_NUMS_LENGTH];
-	private int number;
+	private final int[] enteredNums = new int[10];
+	private int playerAttempts;
 
 	public Player(String name) {
 		this.name = name;
@@ -16,19 +15,23 @@ public class Player {
 		return name;
 	}
 
-	public void setNumber(int number) {
-		this.number = number;
+	public void setEnteredNum(int num) {
+		enteredNums[playerAttempts - 1] = num;
 	}
 
-	public int getNumber() {
-		return number;
+	public int[] getEnteredNums() {
+		return Arrays.copyOf(enteredNums, playerAttempts);
 	}
 
-	public void setEnteredNums(int number, int enteredNumIndex) {
-		enteredNums[enteredNumIndex] = number;
+	public int getLastEnteredNum() {
+		return enteredNums[playerAttempts - 1];
 	}
 
-	public int[] getEnteredNums(int totalCounts) {
-		return Arrays.copyOf(enteredNums, totalCounts);
+	public void setPlayerAttempts(int playerAttempts) {
+		this.playerAttempts = playerAttempts;
+	}
+
+	public int getPlayerAttempts() {
+		return playerAttempts;
 	}
 }
