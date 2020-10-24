@@ -16,8 +16,8 @@ public class Player {
 	}
 
 	public void setEnteredNum(int num) {
+		enteredNums[attempts] = num;
 		attempts++;
-		enteredNums[attempts - 1] = num;
 	}
 
 	public int[] getEnteredNums() {
